@@ -71,4 +71,4 @@ mv gitlocalcronarchive.tgz ~/tmp/gitlocalcronarchive/gitlocalcronarchive_$(date 
 
 to extract the archive: (example)
 
-`tar -xvzf ~/tmp/gitlocalcronarchive/gitlocalcronarchive_2022-05-27-20:14:46 --directory ~/tmp/untargitlocalcronarchive`
+`tar -xvzf ~/tmp/gitlocalcronarchive/gitlocalcronarchive_2022-05-27-20:14:46.tgz --directory ~/tmp/untargitlocalcronarchive`
