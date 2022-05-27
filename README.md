@@ -17,7 +17,7 @@ example to run a cron job: (add the following command after executing "crontab -
 
 ### First Approach: (the git-way; pushing to a specific branch)
 
-The following script is to add, commit & push to a specific branch in remote repo:
+The following [script](https://github.com/raghavendramallela/gitcronarchive/blob/main/gitcronpush.sh) is to add, commit & push to a specific branch in remote repo:
 
 ```
 #!/bin/bash
@@ -41,7 +41,7 @@ git push origin $GITWORKBRANCH
 
 ### Second Approach: (archiving the git working directory)
 
-The following script is to archive all working tree files & directories in to the local host:
+The following [script](https://github.com/raghavendramallela/gitcronarchive/blob/main/gitcronarchive.sh) is to archive all working tree files & directories in to the local host:
 
 
 ```
@@ -52,11 +52,11 @@ $GITWORKDIR=""
 ## example:
 ## $GITWORKDIR="/home/centos/mygit/"
 
-## make a directory to store archives
-mkdir -p ~/tmp/gitlocalcronarchive
+## make directories to store archives & untar directory
+mkdir -p ~/tmp/gitlocalcronarchive ~/tmp/untargitlocalcronarchive
 
 ## remove previous archives
-# rm -rf ~/tmp/gitlocalcronarchive/*
+# rm -rf ~/tmp/gitlocalcronarchive/*tgz
 
 cd $GITWORKDIR
 
@@ -67,3 +67,7 @@ git ls-files -cmo --directory | tar -czf gitlocalcronarchive.tgz -T -
 ## moving the archive to the tmp directory
 mv gitlocalcronarchive.tgz ~/tmp/gitlocalcronarchive/gitlocalcronarchive_$(date +"%F-%H:%M:%S").tgz
 ```
+
+to extract the archive: (example)
+
+`tar -xvzf ~/tmp/gitlocalcronarchive/gitlocalcronarchive_2022-05-27-20:14:46 --directory ~/tmp/untargitlocalcronarchive`
