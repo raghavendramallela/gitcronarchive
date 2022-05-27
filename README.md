@@ -57,6 +57,7 @@ mkdir -p ~/tmp/gitlocalcronarchive ~/tmp/untargitlocalcronarchive
 
 ## remove previous archives
 # rm -rf ~/tmp/gitlocalcronarchive/*.tgz
+# rm -rf ~/tmp/untargitlocalcronarchive/*
 
 cd $GITWORKDIR
 
