@@ -5,11 +5,11 @@ $GITWORKDIR=""
 ## example:
 ## $GITWORKDIR="/home/centos/mygit/"
 
-## make a directory to store archives
-mkdir -p ~/tmp/gitlocalcronarchive
+## make directories to store archives & untar directory
+mkdir -p ~/tmp/gitlocalcronarchive ~/tmp/untargitlocalcronarchive
 
 ## remove previous archives
-# rm -rf ~/tmp/gitlocalcronarchive/*
+# rm -rf ~/tmp/gitlocalcronarchive/*tgz
 
 cd $GITWORKDIR
 
